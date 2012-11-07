@@ -11,6 +11,10 @@ wp-content/advanced-cache.php
 wp-content/wp-cache-config.php
 wp-content/cache/*
 wp-content/cache/supercache/*
+wp-content/themes/twentyeleven/*
+wp-content/themes/twentyten/*
+wp-content/plugins/akismet/*
+wp-content/plugins/hello.php
 sitemap.xml
 sitemap.xml.gz
 readme.html
