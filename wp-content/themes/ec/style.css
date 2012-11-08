@@ -563,6 +563,10 @@ body{
   background-image: url(img/dev-bg-home.png);
 */
 }
+.slug-pessoas{
+  background-image: url(img/dev-bg-pessoas.png);
+  background-position: -480px -299px;
+}
 
 
 /* Fontes
@@ -672,3 +676,32 @@ body{
 .slug-home #menu-principal #menu-item-pessoas a:active   {background-position: -561px -39px;}
 .slug-home #menu-principal #menu-item-contato a:active   {background-position: -741px -39px;}
 
+/* Pessoas
+----------------------------------------------- */
+
+
+.slug-pessoas #main{
+  background:rgba(255,255,0,0.5);
+  clear: both;
+  position: relative;
+  top: 43px;
+  width:888px;
+  margin: auto;
+  min-height: 391px;
+}
+.slug-pessoas #names_sidebar{
+  background:rgba(0,255,255,0.5);
+  min-height: 10px;
+  width:250px;
+  float: left;
+}
+.slug-pessoas #bio{
+  background:rgba(255,0,255,0.5);
+  min-height: 10px;
+  width: 350px;
+  float: right;
+}
+.clearfloat{
+  clear: both;
+  float: none;
+}
