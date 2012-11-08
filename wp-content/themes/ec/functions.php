@@ -113,3 +113,17 @@ add_action( 'wp_enqueue_scripts', 'ec_scripts' );
  * Implement the Custom Header feature
  */
 //require( get_template_directory() . '/inc/custom-header.php' );
+
+
+
+// adaptado de http://www.wpreso.com/blog/tutorials/2011/01/04/add-pagepost-slug-class-to-menu-item-classes/
+function add_slug_class_to_menu_item($output){
+		$idstr = preg_match_all('/<li id="menu-item-(\d+)/', $output, $matches);
+		foreach($matches[1] as $mid){
+			$id = get_post_meta($mid, '_menu_item_object_id', true);
+			$slug = get_post($id)->post_name;
+			$output = preg_replace('/id="menu-item-'.$mid.'"/', 'id="menu-item-'.$slug.'"', $output, 1);
+		}
+	return $output;
+}
+add_filter('wp_nav_menu', 'add_slug_class_to_menu_item');
