@@ -549,3 +549,59 @@ object {
 #searchsubmit {
 	display: none;
 }
+
+
+/* =Custom EC-Site
+----------------------------------------------- */
+
+/* debug
+----------------------------------------------- */
+body{
+  background-repeat: no-repeat;
+  background-position: center -101px;
+  background-image: url(img/dev-bg-home.png);
+}
+
+/* Geral
+----------------------------------------------- */
+#masthead{
+  position: relative;
+  top: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#menu-principal{
+  background-color: rgba(0,255,255,0.5);
+  width: 900px;
+  height:66px;
+  margin: auto;
+}
+
+#menu-principal .menu-item{
+  background-color: rgba(255,255,0,0.5);
+  margin-left:10px;
+  margin-right:10px;
+  height: 100%;
+  width: 160px;
+}
+#menu-principal .menu-item a{
+  background-color: rgba(255,0,0,0.5);
+  position: absolute;
+  width:100%;
+  text-align: center;
+  vertical-align: bottom;
+  padding-top: 42px;
+}
+/* Home
+----------------------------------------------- */
+
+.slug-home #masthead{
+  top:222px;
+}
+.slug-home #menu-principal{
+  height:116px;
+}
+.slug-home #menu-principal .menu-item a{
+  padding-top: 92px;
+}
