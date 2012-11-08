@@ -5,3 +5,4 @@
 # Deploy:
 
 - lembrar de desligar o live plugin
+- limpar linhas comentadas no css
