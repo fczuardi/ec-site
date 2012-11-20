@@ -27,6 +27,11 @@ if ( ! function_exists( 'ec_setup' ) ) :
 function ec_setup() {
 
 	/**
+	 * Custom Post Types
+	 */
+	require( get_template_directory() . '/inc/theme-options/custom-types.php' );
+
+	/**
 	 * Custom template tags for this theme.
 	 */
 	require( get_template_directory() . '/inc/template-tags.php' );
@@ -127,3 +132,4 @@ function add_slug_class_to_menu_item($output){
 	return $output;
 }
 add_filter('wp_nav_menu', 'add_slug_class_to_menu_item');
+?>
