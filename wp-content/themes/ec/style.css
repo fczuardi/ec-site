@@ -682,7 +682,7 @@ body{
 
 .slug-pessoas #main{
   /*background:rgba(255,255,0,0.5);*/
-  background-image: url(img/dev-caixa-pessoas.png);
+  /*background-image: url(img/dev-caixa-pessoas.png);*/
   clear: both;
   position: relative;
   top: 43px;
@@ -695,7 +695,7 @@ body{
 .slug-pessoas #names_sidebar{
   /*background:rgba(0,255,255,0.5);*/
   min-height: 10px;
-  width:245px;
+  width:250px;
   float: left;
 }
 .slug-pessoas #names_sidebar ol {
@@ -744,10 +744,16 @@ body{
 .slug-pessoas #names_sidebar ol li.active .position {
   color: #42C4DD;
 }
+.slug-pessoas #names_sidebar ol li.active .email {
+  line-height: 16px;
+  vertical-align: middle;
+  height: 26px;
+}
 .slug-pessoas #names_sidebar ol li.active .email a{
   font-family: sans-serif;
   color: #42C4DD;
   font-size: 15px;
+  line-height: 16px;
 }
 .slug-pessoas #bio{
   /*background:rgba(255,0,255,0.5);*/
