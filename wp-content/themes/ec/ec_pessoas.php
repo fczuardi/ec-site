@@ -7,13 +7,34 @@ get_header();
 <div id="names_sidebar">
   <ol>
     <li>
-      <a href="">Valdir</a>
+      <a href="#">VALDIR</a>
+      <p class="fullname">VICTOR ARAGÃO</p>
+      <p class="position">DIRETOR DE CRIAÇÃO</p>
+      <span class="email"><a href="mailto:victor@ec.vc">victor@ec.vc</a></span>
     </li>
     <li>
-      <a href="">Tiago</a>
+      <a href="#">TIAGO</a>
+      <p class="fullname">VICTOR ARAGÃO</p>
+      <p class="position">DIRETOR DE CRIAÇÃO</p>
+      <span class="email"><a href="mailto:victor@ec.vc">victor@ec.vc</a></span>
     </li>
     <li>
-      <a href="">Fábio</a>
+      <a href="#">FÁBIO</a>
+      <p class="fullname">VICTOR ARAGÃO</p>
+      <p class="position">DIRETOR DE CRIAÇÃO</p>
+      <span class="email"><a href="mailto:victor@ec.vc">victor@ec.vc</a></span>
+    </li>
+    <li>
+      <a href="#">ANDERSON</a>
+      <p class="fullname">VICTOR ARAGÃO</p>
+      <p class="position">DIRETOR DE CRIAÇÃO</p>
+      <span class="email"><a href="mailto:victor@ec.vc">victor@ec.vc</a></span>
+    </li>
+    <li class="active">
+      <a href="#">VICTOR</a>
+      <p class="fullname">VICTOR ARAGÃO</p>
+      <p class="position">DIRETOR DE CRIAÇÃO</p>
+      <span class="email"><a href="mailto:victor@ec.vc">victor@ec.vc</a></span>
     </li>
   </ol>
 </div>
@@ -30,3 +51,7 @@ Em sua formação: Basel Design School/Suíça, Arte e Tecnologia/PUC SP e Artes
 </div>
 <div class="clearfloat"></div>
  <!-- <br style="clear:both;float:none;" /> -->
+
+<?php
+get_footer();
+?>

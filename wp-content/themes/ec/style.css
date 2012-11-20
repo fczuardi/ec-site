@@ -564,7 +564,7 @@ body{
 
 */}
 .slug-pessoas{
-  background-image: url(img/dev-bg-pessoas.png);
+  /*background-image: url(img/dev-bg-pessoas.png);*/
   background-position: -480px -299px;
 }
 
@@ -681,22 +681,76 @@ body{
 
 
 .slug-pessoas #main{
-  background:rgba(255,255,0,0.5);
+  /*background:rgba(255,255,0,0.5);*/
+  background-image: url(img/dev-caixa-pessoas.png);
   clear: both;
   position: relative;
   top: 43px;
-  width:888px;
+  width:880px;
   margin: auto;
   min-height: 391px;
+  -webkit-box-shadow: 0px 0px 4px 0px #ccc; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  box-shadow: 0px 0px 4px 0px #ccc; /* Opera 10.5, IE9+, Firefox 4+, Chrome 6+, iOS 5 */
 }
 .slug-pessoas #names_sidebar{
-  background:rgba(0,255,255,0.5);
+  /*background:rgba(0,255,255,0.5);*/
   min-height: 10px;
-  width:250px;
+  width:245px;
   float: left;
 }
+.slug-pessoas #names_sidebar ol {
+  list-style-type: none;
+  margin: 18px 0 0 20px;
+  padding: 0px;
+}
+.slug-pessoas #names_sidebar ol li:first-child {
+  margin: 0;
+}
+.slug-pessoas #names_sidebar ol li {
+  margin: 0px 0 0 0;
+  line-height: 30px;
+  font-size: 30px;
+  font-family: 'flama_condensed_blackregular';
+}
+.slug-pessoas #names_sidebar ol a,
+.slug-pessoas #names_sidebar ol a:link,
+.slug-pessoas #names_sidebar ol a:active,
+.slug-pessoas #names_sidebar ol a:visited,
+.slug-pessoas #names_sidebar ol a:hover {
+  text-decoration: none;
+  color: #E5E5E3;
+}
+.slug-pessoas #names_sidebar ol a:hover {
+  color: #E5E5E3;
+}
+.slug-pessoas #names_sidebar ol li > * {
+  display: none;
+}
+.slug-pessoas #names_sidebar ol li.active > * {
+  display: block;
+}
+.slug-pessoas #names_sidebar ol li > a {
+  display: block;
+}
+.slug-pessoas #names_sidebar ol li.active > a {
+  display: none;
+}
+.slug-pessoas #names_sidebar ol li.active p {
+  margin: 0px
+}
+.slug-pessoas #names_sidebar ol li.active .fullname {
+  color: #2E2B2B;
+}
+.slug-pessoas #names_sidebar ol li.active .position {
+  color: #42C4DD;
+}
+.slug-pessoas #names_sidebar ol li.active .email a{
+  font-family: sans-serif;
+  color: #42C4DD;
+  font-size: 15px;
+}
 .slug-pessoas #bio{
-  background:rgba(255,0,255,0.5);
+  /*background:rgba(255,0,255,0.5);*/
   min-height: 10px;
   width: 350px;
   float: right;
