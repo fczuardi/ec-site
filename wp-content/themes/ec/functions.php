@@ -29,7 +29,7 @@ function ec_setup() {
 	/**
 	 * Custom Post Types
 	 */
-	require( get_template_directory() . '/inc/theme-options/custom-types.php' );
+	require( get_template_directory() . '/inc/theme-options/custom-type-pessoa.php' );
 
 	/**
 	 * Custom template tags for this theme.
@@ -63,6 +63,8 @@ function ec_setup() {
 	 * Enable support for Post Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
+	// Custom sizes
+	add_image_size( 'ec_pessoa_foto', 746, 386, true );
 
 	/**
 	 * This theme uses wp_nav_menu() in one location.
