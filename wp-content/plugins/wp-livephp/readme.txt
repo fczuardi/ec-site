@@ -3,7 +3,7 @@ Contributors: mbence
 Donate link: http://bencemeszaros.com/donate/
 Tags: developer, live, autorefresh, theme, plugin, refresh, easy, development
 Requires at least: 2.6
-Tested up to: 3.3.1
+Tested up to: 3.4.2
 Stable tag: /trunk/
 
 Automatically refresh your browser if you change any files in your theme or plugins directory
@@ -39,6 +39,8 @@ Upload the WP Live.php plugin to your blog and Activate it. Thats all.
 2. Admin bar integration
 
 == Changelog ==
+= 1.4.1 =
+* File state cache clearing added
 = 1.4 =
 * Switched to long polling. Now the js will open only one long ajax request every 2 minutes (or as long as the php script is allowed to run). 
 = 1.3.1 = 
