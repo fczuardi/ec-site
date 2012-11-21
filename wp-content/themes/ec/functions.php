@@ -64,7 +64,7 @@ function ec_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 	// Custom sizes
-	add_image_size( 'ec_pessoa_foto', 746, 386, true );
+	add_image_size( 'ec_pessoa_foto', 880, 391, true );
 
 	/**
 	 * This theme uses wp_nav_menu() in one location.
