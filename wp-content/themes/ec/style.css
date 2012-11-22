@@ -779,6 +779,12 @@ body{
   line-height: 20px;
   font-weight: bold;
 }
+.slug-pessoas #bio {
+  font-size: 15px;
+  font-family: sans-serif;
+  line-height: 20px;
+  font-weight: bold;
+}
 .clearfloat{
   clear: both;
   float: none;
