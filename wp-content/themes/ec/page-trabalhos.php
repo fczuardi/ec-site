@@ -15,7 +15,6 @@ $wp_query = new WP_Query($args);
   <?php
       if( have_posts() ) :
         while ($wp_query->have_posts()) : $wp_query->the_post();
-          // $ec_trabalho_grid_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'ec_trabalho_grids');
     ?>
       <div class="icon">
         <a href="#">

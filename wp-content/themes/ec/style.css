@@ -802,9 +802,8 @@ body{
 }
 .slug-trabalhos .icon {
   border-radius: 4px;
-  width: 158px;
-  height: 158px;
-  border: 1px solid #fff;
+  width: 160px;
+  height: 160px;
   display: block;
   float: left;
   margin: 0 20px 20px 0;
@@ -816,8 +815,6 @@ body{
   position: relative;
   top: 0;
   left: 0;
-  width: 158px;
-  height: 158px;
 }
 .slug-trabalhos .icon span {
   text-align: center;
@@ -834,9 +831,6 @@ body{
   font-size: 34px;
   font-family: 'flama_condensed_blackregular';
   text-transform: uppercase;
-}
-.slug-trabalhos .icon:hover {
-  border: 1px solid #333;
 }
 .slug-trabalhos .icon:hover img {
   display: none;
