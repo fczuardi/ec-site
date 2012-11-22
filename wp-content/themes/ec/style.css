@@ -723,6 +723,7 @@ body{
 .slug-pessoas #names_sidebar ol a:hover {
   text-decoration: none;
   color: #E5E5E3;
+  text-transform: uppercase;
 }
 .slug-pessoas #names_sidebar ol a:hover {
   color: #E5E5E3;
@@ -744,9 +745,11 @@ body{
 }
 .slug-pessoas #names_sidebar ol li.active .fullname {
   color: #2E2B2B;
+  text-transform: uppercase;
 }
 .slug-pessoas #names_sidebar ol li.active .position {
   color: #42C4DD;
+  text-transform: uppercase;
 }
 .slug-pessoas #names_sidebar ol li.active .email {
   line-height: 16px;
