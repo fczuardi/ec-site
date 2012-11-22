@@ -47,6 +47,11 @@ function ec_setup() {
 	//require( get_template_directory() . '/inc/theme-options/theme-options.php' );
 
 	/**
+	 * Custom Taxonomies and Metas
+	 */
+	require( get_template_directory() . '/inc/theme-options/custom-taxonomies-metas.php' );
+
+	/**
 	 * Make theme available for translation
 	 * Translations can be filed in the /languages/ directory
 	 * If you're building a theme based on ec, use a find and replace
