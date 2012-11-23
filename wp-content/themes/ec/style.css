@@ -582,6 +582,26 @@ body{
     font-style: normal;
 
 }
+@font-face {
+    font-family: 'rudabold';
+    src: url('fonts/ruda-bold-webfont.eot');
+    src: url('fonts/ruda-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ruda-bold-webfont.woff') format('woff'),
+         url('fonts/ruda-bold-webfont.ttf') format('truetype'),
+         url('fonts/ruda-bold-webfont.svg#rudabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'rudaregular';
+    src: url('fonts/ruda-regular-webfont.eot');
+    src: url('fonts/ruda-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ruda-regular-webfont.woff') format('woff'),
+         url('fonts/ruda-regular-webfont.ttf') format('truetype'),
+         url('fonts/ruda-regular-webfont.svg#rudaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* Geral
 ----------------------------------------------- */
@@ -751,16 +771,16 @@ body{
   color: #42C4DD;
   text-transform: uppercase;
 }
-.slug-pessoas #names_sidebar ol li.active .email {
-  line-height: 16px;
+.slug-pessoas #names_sidebar ol li.active .email,
+.slug-pessoas #names_sidebar ol li.active .email a {
+  font-family: 'rudaregular';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 26px;
   vertical-align: middle;
   height: 26px;
-}
-.slug-pessoas #names_sidebar ol li.active .email a{
-  font-family: sans-serif;
   color: #42C4DD;
-  font-size: 15px;
-  line-height: 16px;
 }
 .slug-pessoas #bio{
   min-height: 10px;
@@ -768,6 +788,18 @@ body{
   float: right;
   margin: 15px 30px 0 0px;
   /*background:rgba(255,0,255,0.5);*/
+font-family: 'rudabold';
+  font-style: normal;
+  font-weight: 700;
+  font-family: 'rudabold';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: none;
+  text-decoration: none;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1.65em;
 }
 .slug-pessoas #bio > div {
   display: none;
@@ -776,18 +808,9 @@ body{
   display: block;
 }
 .slug-pessoas #bio p {
-  font-size: 15px;
-  font-family: sans-serif;
   margin-bottom: 10px;
-  line-height: 20px;
-  font-weight: bold;
 }
-.slug-pessoas #bio {
-  font-size: 15px;
-  font-family: sans-serif;
-  line-height: 20px;
-  font-weight: bold;
-}
+
 .slug-trabalhos #main{
   /*background:rgba(255,255,0,0.5);*/
   /*background-image: url(img/dev-caixa-pessoas.png);*/
