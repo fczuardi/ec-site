@@ -808,7 +808,8 @@ body{
   margin-bottom: 10px;
 }
 
-.slug-trabalhos #main{
+.slug-trabalhos #main,
+.slug-clientes #main{
   /*background:rgba(255,255,0,0.5);*/
   /*background-image: url(img/dev-caixa-pessoas.png);*/
   clear: both;
@@ -817,10 +818,12 @@ body{
   width:880px;
   margin: auto;
 }
-.slug-trabalhos .grid {
+.slug-trabalhos .grid,
+.grid {
   width: 1000px;
 }
-.slug-trabalhos .icon {
+.slug-trabalhos .icon,
+.slug-clientes .icon {
   border-radius: 4px;
   width: 160px;
   height: 160px;
@@ -830,23 +833,33 @@ body{
   overflow: hidden;
   position: relative;
 }
-.slug-trabalhos .icon img {
+.slug-trabalhos .icon img ,
+.icon img {
   border-radius: 4px;
   position: absolute;
   top: 0;
   left: 0;
 }
-.slug-trabalhos .icon img.play {
+.slug-clientes .icon img{
+  top:-160px;
+}
+.slug-clientes .icon img:hover{
+  top:0px;
+}
+.slug-trabalhos .icon img.play ,
+.icon img.play{
     z-index: 3;
 }
-.slug-trabalhos .icon span {
+.slug-trabalhos .icon span ,
+.icon span{
   text-align: center;
   border-radius: 4px;
   width: 158px;
   height: 158px;
   display: none;
 }
-.slug-trabalhos .icon span p {
+.slug-trabalhos .icon span p ,
+.icon span p {
   line-height: 40px;
   display: table-cell;
   vertical-align: middle;
@@ -855,16 +868,22 @@ body{
   font-family: 'flama_condensed_blackregular';
   text-transform: uppercase;
 }
-.slug-trabalhos .icon:hover img {
+.slug-trabalhos .icon:hover img
+.icon:hover img{
   display: none;
 }
-.slug-trabalhos .icon:hover span {
+.slug-trabalhos .icon:hover span ,
+.icon:hover span{
   display: table;
 }
 .slug-trabalhos .icon a,
 .slug-trabalhos .icon a:link,
 .slug-trabalhos .icon a:active,
-.slug-trabalhos .icon a:hover {
+.slug-trabalhos .icon a:hover       ,
+.icon a,
+.icon a:link,
+.icon a:active,
+.icon a:hover       {
   text-decoration: none;
   color: #333;
 }
