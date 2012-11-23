@@ -13,7 +13,7 @@ wp-content/cache/*
 wp-content/cache/supercache/*
 wp-content/themes/twentyeleven/*
 wp-content/themes/twentyten/*
-wp-content/themes/ec/fonts/*
+wp-content/themes/ec/fonts/flamacondensed-black-webfont.*
 wp-content/plugins/akismet/*
 wp-content/plugins/hello.php
 sitemap.xml
