@@ -5,30 +5,49 @@
  * @package ec
  * @since ec 1.0
  */
+get_header();
 
-get_header(); ?>
+global $post;
 
-		<div id="primary" class="content-area">
-			<div id="content" class="site-content" role="main">
+if ($_GET["iframe"]) {
+	echo '<style>#masthead {display: none;}</style>';
+}
 
-			<?php while ( have_posts() ) : the_post(); ?>
+while ( have_posts() ) : the_post();
+	$cliente = array_shift(array_values(get_the_terms($post->ID, 'cliente')));
+	$campanha = array_shift(array_values(get_the_terms($post->ID, 'campanha')));
+	// var_dump($cliente);
 
-				<?php ec_content_nav( 'nav-above' ); ?>
+?>
 
-				<?php get_template_part( 'content', 'single' ); ?>
 
-				<?php ec_content_nav( 'nav-below' ); ?>
+<div class="sidebar">
+	<h1><?php echo $cliente->name; ?></h1>
+	<h2><?php echo $campanha->name; ?></h2>
+	<ul>
+		<?php
+		$args = array(
+			'tax_query' => array(
+				array(
+					'taxonomy' => 'campanha',
+					'field' => 'slug',
+					'terms' => $campanha->name
+				)
+			)
+		);
+		$posts = get_posts($args);
+		foreach($posts as $post) :
+		?>
+			<li<?php echo (is_single($post->ID)) ? ' class="active"': ''?>><a href="<?php the_permalink(); ?>&iframe=1"><?php the_title(); ?></a></li>
+		<?php endforeach; ?>
+	</ul>
+</div>
 
-				<?php
-					// If comments are open or we have at least one comment, load up the comment template
-					if ( comments_open() || '0' != get_comments_number() )
-						comments_template( '', true );
-				?>
+<div class="content">
+	<?php the_content(); ?>
+</div>
+<div class="clearfloat"></div>
 
-			<?php endwhile; // end of the loop. ?>
+<?php endwhile;
 
-			</div><!-- #content .site-content -->
-		</div><!-- #primary .content-area -->
-
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+get_footer(); ?>

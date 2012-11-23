@@ -17,7 +17,7 @@ $wp_query = new WP_Query($args);
         while ($wp_query->have_posts()) : $wp_query->the_post();
     ?>
       <div class="icon">
-        <a href="#">
+        <a class="iframe" href="<?php the_permalink(); ?>&iframe=1">
           <span><p><?php the_title()?></p></span>
           <?php if( 'video' == get_post_meta($post->ID, '_tipo', true)): ?>
           <img class="play" src="<?php echo get_template_directory_uri(); ?>/img/play.png">
@@ -36,8 +36,13 @@ $wp_query = new WP_Query($args);
 
 <script>
   jQuery(document).ready(function ($) {
-
-
+    $(".iframe").colorbox({
+      iframe:true,
+      width: "880px",
+      height: "80%",
+      transition: "none",
+      opacity: 0.5
+    });
   });
 </script>
 
