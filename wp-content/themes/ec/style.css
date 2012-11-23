@@ -832,9 +832,12 @@ body{
 }
 .slug-trabalhos .icon img {
   border-radius: 4px;
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
+}
+.slug-trabalhos .icon img.play {
+    z-index: 3;
 }
 .slug-trabalhos .icon span {
   text-align: center;

@@ -19,6 +19,9 @@ $wp_query = new WP_Query($args);
       <div class="icon">
         <a href="#">
           <span><p><?php the_title()?></p></span>
+          <?php if( 'video' == get_post_meta($post->ID, '_tipo', true)): ?>
+          <img class="play" src="<?php echo get_template_directory_uri(); ?>/img/play.png">
+          <?php endif; ?>
           <?php the_post_thumbnail('ec_trabalho_grid'); ?>
         </a>
       </div>
