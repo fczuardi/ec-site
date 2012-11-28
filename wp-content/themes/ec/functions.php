@@ -116,7 +116,7 @@ function ec_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 	if ( is_page( 'trabalhos' ) ) {
-		wp_enqueue_script( 'colorbox', get_template_directory_uri() . '/js/jquery.colorbox-min.js', array( 'jquery' ), '1.3.20' );
+		wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/js/jquery.fancybox.pack.js', array( 'jquery' ), '2.1.3' );
 	}
 
 	if ( is_singular() && wp_attachment_is_image() ) {
