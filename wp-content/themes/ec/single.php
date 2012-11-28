@@ -38,7 +38,7 @@ while ( have_posts() ) : the_post();
 		$posts = get_posts($args);
 		foreach($posts as $post) :
 		?>
-			<li<?php echo (is_single($post->ID)) ? ' class="active"': ''?>><a href="<?php the_permalink(); ?>&iframe=1"><?php the_title(); ?></a></li>
+			<li<?php echo (is_single($post->ID)) ? ' class="active"': ''?>><a href="<?php the_permalink(); ?>?iframe=1"><?php the_title(); ?></a></li>
 		<?php endforeach; ?>
 	</ul>
 </div>
