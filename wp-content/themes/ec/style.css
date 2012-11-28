@@ -803,6 +803,7 @@ body{
 }
 .slug-pessoas #bio > div {
   display: none;
+  margin-top: 10px;
 }
 .slug-pessoas #bio > div.active {
   display: block;
