@@ -673,7 +673,10 @@ body{
 ----------------------------------------------- */
 
 .slug-home #masthead{
-  top:212px;
+  top: 50%;
+  position: absolute;
+  left: 50%;
+  margin: -63px 0 0 -450px;
 }
 .slug-home #menu-principal{
   height:126px;
