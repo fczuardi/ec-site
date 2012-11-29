@@ -753,6 +753,9 @@ body{
 .slug-pessoas #names_sidebar ol a:hover {
   color: #E5E5E3;
 }
+.lt-ie8 .slug-pessoas #names_sidebar ol li.active {
+  height: 116px;
+}
 .slug-pessoas #names_sidebar ol li > * {
   display: none;
 }
