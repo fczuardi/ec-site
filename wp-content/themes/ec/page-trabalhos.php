@@ -39,13 +39,18 @@ $wp_query = new WP_Query($args);
     $(document).ready(function() {
       $(".fancybox").fancybox({
         padding: 0,
+        'titleShow': false,
+        'type': 'iframe',
+        'autoDimensions' : false,
         width: 880,
         height: 'auto',
         minHeight: 400,
+        'scrolling': 'no',
         helpers : {
           overlay : {
             css : {
-              'background' : 'rgba(255, 255, 255, 0.5)'
+              'background' : 'rgba(255, 255, 255, 0.5)',
+              'overflow' : 'hidden'
             }
           }
     }

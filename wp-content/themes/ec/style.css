@@ -1154,6 +1154,7 @@ body{
 
 .fancybox-lock {
   overflow: hidden;
+  margin-right:0 !important;
 }
 
 .fancybox-overlay {
@@ -1173,8 +1174,8 @@ body{
 }
 
 .fancybox-lock .fancybox-overlay {
-  overflow: auto;
-  overflow-y: scroll;
+  overflow: hidden;
+  overflow-y: hidden;
 }
 
 /* Title helper */
