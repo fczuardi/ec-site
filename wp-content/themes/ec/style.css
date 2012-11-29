@@ -838,6 +838,7 @@ body{
   margin: 0 20px 20px 0;
   overflow: hidden;
   position: relative;
+  behavior: url(/PIE.php);
 }
 .slug-trabalhos .icon img ,
 .icon img {
@@ -845,7 +846,6 @@ body{
   position: absolute;
   top: 0;
   left: 0;
-  behavior: url(/PIE.php);
 }
 .slug-clientes .icon img{
   top:-160px;
