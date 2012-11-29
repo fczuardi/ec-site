@@ -706,6 +706,7 @@ body{
 .slug-pessoas #main{
   /*background:rgba(255,255,0,0.5);*/
   /*background-image: url(img/dev-caixa-pessoas.png);*/
+  background-color: #FFF;
   clear: both;
   position: relative;
   top: 43px;
@@ -718,10 +719,7 @@ body{
   -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
   -webkit-box-shadow: 0px 0px 30px 0px #ccc; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
   box-shadow: 0px 0px 30px 0px #ccc; /* Opera 10.5, IE9+, Firefox 4+, Chrome 6+, iOS 5 */
-  filter: progid:DXImageTransform.Microsoft.Shadow(color=#cccccc,direction=0,strength=8),
-  progid:DXImageTransform.Microsoft.Shadow(color=#cccccc,direction=90,strength=8),
-  progid:DXImageTransform.Microsoft.Shadow(color=#cccccc,direction=180,strength=8),
-  progid:DXImageTransform.Microsoft.Shadow(color=#cccccc,direction=270,strength=8); /* IE7 and lower */
+  behavior: url(/PIE.php);
 }
 .slug-pessoas #names_sidebar{
   /*background:rgba(0,255,255,0.5);*/
@@ -847,6 +845,7 @@ body{
   position: absolute;
   top: 0;
   left: 0;
+  behavior: url(/PIE.php);
 }
 .slug-clientes .icon img{
   top:-160px;
@@ -1008,6 +1007,7 @@ body{
   -webkit-border-radius: 4px;
      -moz-border-radius: 4px;
           border-radius: 4px;
+  behavior: url(/PIE.php);
 }
 
 .fancybox-opened {
@@ -1021,9 +1021,10 @@ body{
   -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
   -webkit-box-shadow: 0px 0px 30px 0px #ccc; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
   box-shadow: 0px 0px 30px 0px #ccc; /* Opera 10.5, IE9+, Firefox 4+, Chrome 6+, iOS 5 */
+  behavior: url(/PIE.php);
 }
 .lt-ie9 .fancybox-opened .fancybox-skin {
-  border: 1px solid #ccc;
+  /*border: 1px solid #ccc;*/
 }
 
 .fancybox-outer, .fancybox-inner {
@@ -1210,6 +1211,7 @@ body{
   font-weight: bold;
   line-height: 24px;
   white-space: nowrap;
+  behavior: url(/PIE.php);
 }
 
 .fancybox-title-outside-wrap {
