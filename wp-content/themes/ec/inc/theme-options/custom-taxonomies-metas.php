@@ -17,6 +17,12 @@ function ec_type_post_properties() {
     'ec_admin_meta_post_tipo',
     'post'
   );
+  add_meta_box(
+    'ec_post_subtitulo',
+    __( 'Subtítulo', 'ec'),
+    'ec_admin_meta_post_subtitulo',
+    'post'
+  );
 }
 
 function ec_admin_meta_post_ordem( $post ) {
@@ -36,6 +42,13 @@ function ec_admin_meta_post_tipo( $post ) {
   echo '</table>';
 }
 
+function ec_admin_meta_post_subtitulo( $post ) {
+  $subtitulo = get_post_meta($post->ID, '_subtitulo', true);
+  echo '<table class="form-table">';
+  echo '<input type="text" name="_subtitulo" placeholder="Impresso 1" value="', $subtitulo ? $subtitulo : '','" size="30" style="width:75%; margin-right: 20px; float:left;" />';
+  echo '</table>';
+}
+
 
 add_action( 'save_post', 'ec_post_save_postdata' );
 function ec_post_save_postdata( $post_id ) {
@@ -44,9 +57,11 @@ function ec_post_save_postdata( $post_id ) {
 
   $pessoa_ordem = $_POST['_ordem'];
   $pessoa_tipo = $_POST['_tipo'];
+  $pessoa_subtitulo = $_POST['_subtitulo'];
 
   add_post_meta($post_id, '_ordem', $pessoa_ordem, true) or update_post_meta($post_id, '_ordem', $pessoa_ordem);
   add_post_meta($post_id, '_tipo', $pessoa_tipo, true) or update_post_meta($post_id, '_tipo', $pessoa_tipo);
+  add_post_meta($post_id, '_subtitulo', $pessoa_subtitulo, true) or update_post_meta($post_id, '_subtitulo', $pessoa_subtitulo);
 
 }
 
