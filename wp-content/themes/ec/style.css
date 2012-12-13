@@ -904,7 +904,7 @@ body{
 .single .sidebar {
     float: left;
     margin: 20px;
-    width: 160px;
+    width: 220px;
 }
 .single h1,
 .single h2 {
@@ -945,7 +945,8 @@ body{
 .single .content {
     float: right;
     margin: 20px 20px 20px 0;
-    width: 660px;
+    width: 600px;
+    height: 480px;
     font-family: 'rudabold';
     font-style: normal;
     font-weight: 700;
@@ -956,10 +957,13 @@ body{
     word-spacing: 0em;
     line-height: 1.65em;
     color: #2E2B2B;
+    overflow: hidden;
+    text-align: center;
 }
 .single .content img {
-    width: 660px;
-    /*max-width: 660px*/
+    /*width: 600px;*/
+    /*max-width: 600px;*/
+    height: 480px;
 }
 .single .content a {
     color: #2E2B2B;

@@ -15,10 +15,12 @@ $wp_query = new WP_Query($args);
   <?php
       if( have_posts() ) :
         while ($wp_query->have_posts()) : $wp_query->the_post();
+          $campanha = array_shift(array_values(get_the_terms($post->ID, 'campanha')));
+          $cliente = array_shift(array_values(get_the_terms($post->ID, 'cliente')));
     ?>
       <div class="icon">
         <a class="fancybox" data-fancybox-type="iframe" href="<?php the_permalink(); ?>?iframe=1">
-          <span><p><?php the_title()?></p></span>
+          <span><p><?php echo $cliente->name; ?><br /><?php echo $campanha->name; ?></p></span>
           <?php if( 'video' == get_post_meta($post->ID, '_tipo', true)): ?>
           <img class="play" src="<?php echo get_template_directory_uri(); ?>/img/play.png">
           <?php endif; ?>
@@ -43,8 +45,8 @@ $wp_query = new WP_Query($args);
         'type': 'iframe',
         'autoDimensions' : false,
         width: 880,
-        height: 'auto',
-        minHeight: 400,
+        minHeight: 520,
+        // minHeight: 300,
         'scrolling': 'no',
         helpers : {
           overlay : {
