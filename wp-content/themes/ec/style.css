@@ -961,9 +961,10 @@ body{
     text-align: center;
 }
 .single .content img {
-    /*width: 600px;*/
+    /*width: 800px !important;*/
     /*max-width: 600px;*/
-    height: 480px;
+    /*height: 100%;*/
+    /*vertical-align: middle;*/
 }
 .single .content a {
     color: #2E2B2B;

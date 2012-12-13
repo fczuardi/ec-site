@@ -45,8 +45,9 @@ $wp_query = new WP_Query($args);
         'type': 'iframe',
         'autoDimensions' : false,
         width: 880,
-        minHeight: 520,
-        // minHeight: 300,
+        height: 'auto',
+        minHeight: 320,
+        // minHeight: 320,
         'scrolling': 'no',
         helpers : {
           overlay : {
