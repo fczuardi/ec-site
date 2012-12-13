@@ -874,7 +874,7 @@ body{
   display: table-cell;
   vertical-align: middle;
   text-align: center;
-  font-size: 34px;
+  font-size: 24px;
   font-family: 'flama_condensed_blackregular';
   text-transform: uppercase;
 }
@@ -946,7 +946,7 @@ body{
     float: right;
     margin: 20px 20px 20px 0;
     width: 600px;
-    height: 480px;
+    max-height: 480px;
     font-family: 'rudabold';
     font-style: normal;
     font-weight: 700;
@@ -959,12 +959,17 @@ body{
     color: #2E2B2B;
     overflow: hidden;
     text-align: center;
+    vertical-align: middle;
 }
-.single .content img {
+.single .content p {
+    margin: 0px;
+}
+.single .content p img {
     /*width: 800px !important;*/
     /*max-width: 600px;*/
     /*height: 100%;*/
-    /*vertical-align: middle;*/
+    vertical-align: middle;
+    display: inline;
 }
 .single .content a {
     color: #2E2B2B;

@@ -27,6 +27,7 @@ while ( have_posts() ) : the_post();
 	<ul>
 		<?php
 		$args = array(
+			'posts_per_page' => -1,
 			'tax_query' => array(
 				array(
 					'taxonomy' => 'campanha',

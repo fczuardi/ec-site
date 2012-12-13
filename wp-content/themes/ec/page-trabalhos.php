@@ -46,7 +46,7 @@ $wp_query = new WP_Query($args);
         'autoDimensions' : false,
         width: 880,
         height: 'auto',
-        minHeight: 320,
+        // minHeight: 320,
         // minHeight: 320,
         'scrolling': 'no',
         helpers : {
