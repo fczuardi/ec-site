@@ -4,8 +4,8 @@ get_header();
 
 $args=array(
   'post_type' => 'post',
-  'posts_per_page' => $posts_per_page,
-  'orderby'=> 'date'
+  'posts_per_page' => -1,
+  'orderby'=> 'rand'
 );
 
 $wp_query = new WP_Query($args);
