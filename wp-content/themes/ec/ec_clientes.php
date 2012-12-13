@@ -6,7 +6,7 @@ get_header();
 
 
 // $clients = get_terms( 'cliente', 'orderby=count&hide_empty=0' );
-$clients = get_terms( 'cliente', 'orderby=id&order=DESC&hide_empty=0' );
+$clients = get_terms( 'cliente', 'orderby=slug&order=ASC&hide_empty=0' );
 ?>
 
 <div class="grid">
