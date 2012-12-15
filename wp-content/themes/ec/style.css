@@ -878,6 +878,9 @@ body{
   font-family: 'flama_condensed_blackregular';
   text-transform: uppercase;
 }
+.slug-trabalhos .icon:active {
+    background-color: #42C4DD;
+}
 .slug-trabalhos .icon:hover img{
   display: none;
 }
