@@ -5,7 +5,9 @@ get_header();
 $args=array(
   'post_type' => 'post',
   'posts_per_page' => -1,
-  'orderby'=> 'rand'
+  'orderby'=> 'rand',
+  'meta_key'=>'_destaque',
+  'meta_value'=>'exibir'
 );
 
 $wp_query = new WP_Query($args);

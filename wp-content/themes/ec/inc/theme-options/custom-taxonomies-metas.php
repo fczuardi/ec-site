@@ -23,6 +23,12 @@ function ec_type_post_properties() {
     'ec_admin_meta_post_subtitulo',
     'post'
   );
+  add_meta_box(
+    'ec_post_destaque',
+    __( 'Destaque', 'ec'),
+    'ec_admin_meta_post_destaque',
+    'post'
+  );
 }
 
 function ec_admin_meta_post_ordem( $post ) {
@@ -49,19 +55,27 @@ function ec_admin_meta_post_subtitulo( $post ) {
   echo '</table>';
 }
 
+function ec_admin_meta_post_destaque( $post ) {
+  $destaque = get_post_meta($post->ID, '_destaque', true);
+  echo '<table class="form-table">';
+  echo '<label class="selectit"><input value="exibir" type="checkbox" name="_destaque" ', ($destaque == 'exibir') ? 'checked="checked"' : '', '> Exibir na Página de Trabalhos</label>';
+  echo '</table>';
+}
 
 add_action( 'save_post', 'ec_post_save_postdata' );
 function ec_post_save_postdata( $post_id ) {
   if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
       return;
 
-  $pessoa_ordem = $_POST['_ordem'];
-  $pessoa_tipo = $_POST['_tipo'];
-  $pessoa_subtitulo = $_POST['_subtitulo'];
+  $post_ordem = $_POST['_ordem'];
+  $post_tipo = $_POST['_tipo'];
+  $post_subtitulo = $_POST['_subtitulo'];
+  $post_destaque = $_POST['_destaque'];
 
-  add_post_meta($post_id, '_ordem', $pessoa_ordem, true) or update_post_meta($post_id, '_ordem', $pessoa_ordem);
-  add_post_meta($post_id, '_tipo', $pessoa_tipo, true) or update_post_meta($post_id, '_tipo', $pessoa_tipo);
-  add_post_meta($post_id, '_subtitulo', $pessoa_subtitulo, true) or update_post_meta($post_id, '_subtitulo', $pessoa_subtitulo);
+  add_post_meta($post_id, '_ordem', $post_ordem, true) or update_post_meta($post_id, '_ordem', $post_ordem);
+  add_post_meta($post_id, '_tipo', $post_tipo, true) or update_post_meta($post_id, '_tipo', $post_tipo);
+  add_post_meta($post_id, '_subtitulo', $post_subtitulo, true) or update_post_meta($post_id, '_subtitulo', $post_subtitulo);
+  add_post_meta($post_id, '_destaque', $post_destaque, true) or update_post_meta($post_id, '_destaque', $post_destaque);
 
 }
 
