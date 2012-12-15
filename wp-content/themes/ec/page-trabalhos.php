@@ -2,21 +2,57 @@
 
 get_header();
 
-$args=array(
+function cmp($a, $b) {
+  if ($a->show_position == $b->show_position) {
+    return 0;
+  }
+  return ($a->show_position < $b->show_position) ? -1 : 1;
+}
+
+$args = array(
   'post_type' => 'post',
   'posts_per_page' => -1,
-  'orderby'=> 'rand',
-  'meta_key'=>'_destaque',
-  'meta_value'=>'exibir'
+  'meta_key' => '_destaque',
+  'order' => 'ASC',
+  'meta_value' => 'exibir',
+  'orderby' => 'rand'
 );
 
-$wp_query = new WP_Query($args);
+$todos_posts = get_posts( $args );
+$posts_com_posicao = array();
+
+$numeros_ocupados = array();
+$numeros_livres = range(1, count($todos_posts));
+
+foreach ($todos_posts as $key => $post) {
+  if ( get_post_meta($post->ID, '_ordem', true) != '' ) {
+    $temp_nos = (int)get_post_meta($post->ID, '_ordem', true);
+    array_push($numeros_ocupados, $temp_nos);
+    $post->show_position = $temp_nos;
+  }
+}
+
+foreach($numeros_livres as $key => $numero) {
+  foreach ($numeros_ocupados as $value) {
+    if ($value == $numero) {
+       unset($numeros_livres[$key]);
+     }
+  }
+}
+
+foreach ($todos_posts as $key => $post) {
+  if ( get_post_meta($post->ID, '_ordem', true) == '' ) {
+    $post->show_position = array_pop($numeros_livres);;
+  }
+}
+
+usort($todos_posts, "cmp");
 
 ?>
 <div class="grid">
   <?php
       if( have_posts() ) :
-        while ($wp_query->have_posts()) : $wp_query->the_post();
+        foreach ( $todos_posts as $post ):
           $campanha = array_shift(array_values(get_the_terms($post->ID, 'campanha')));
           $cliente = array_shift(array_values(get_the_terms($post->ID, 'cliente')));
     ?>
@@ -30,7 +66,7 @@ $wp_query = new WP_Query($args);
         </a>
       </div>
     <?php
-        endwhile;
+        endforeach;
       endif;
     ?>
 </div>

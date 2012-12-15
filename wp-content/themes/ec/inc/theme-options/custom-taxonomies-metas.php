@@ -7,7 +7,7 @@ add_action( 'add_meta_boxes', 'ec_type_post_properties', 10, 2 );
 function ec_type_post_properties() {
   add_meta_box(
     'ec_post_ordem',
-    __( 'Ordem de exibição', 'ec'),
+    __( 'Posição de exibição no grid', 'ec'),
     'ec_admin_meta_post_ordem',
     'post'
   );
@@ -34,7 +34,8 @@ function ec_type_post_properties() {
 function ec_admin_meta_post_ordem( $post ) {
   $ordem = get_post_meta($post->ID, '_ordem', true);
   echo '<table class="form-table">';
-  echo '<input type="text" name="_ordem" placeholder="" value="', $ordem ? $ordem : '','" size="30" style="width:75%; margin-right: 20px; float:left;" />';
+  echo '<input type="text" name="_ordem" placeholder="" value="', $ordem ? $ordem : '','" size="3" style="width:25px; margin-right: 10px; float:left;" />';
+  echo '<p style="display:block;">Posição opcional no grid Trabalhos</p>';
   echo '</table>';
 }
 
