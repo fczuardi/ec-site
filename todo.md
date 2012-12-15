@@ -24,3 +24,9 @@
 # Detalhes:
 
 - arrumar o pequeno deslocamento de pixels no menu das internas entre o icone normal e o ativo
+
+
+-------------------------------------------------------------------------------
+# Bugs:
+
+- se editor os posts pelo quick-edit, o wordpress limpa os metas
