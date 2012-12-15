@@ -789,6 +789,7 @@ body{
   vertical-align: middle;
   height: 26px;
   color: #42C4DD;
+  text-transform: lowercase;
 }
 .slug-pessoas #bio{
   min-height: 10px;
