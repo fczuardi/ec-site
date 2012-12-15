@@ -53,8 +53,8 @@ usort($todos_posts, "cmp");
   <?php
       if( have_posts() ) :
         foreach ( $todos_posts as $post ):
-          $campanha = array_shift(array_values(get_the_terms($post->ID, 'campanha')));
-          $cliente = array_shift(array_values(get_the_terms($post->ID, 'cliente')));
+          $campanha = array_shift(get_the_terms($post->ID, 'campanha'));
+          $cliente = array_shift(get_the_terms($post->ID, 'cliente'));
     ?>
       <div class="icon">
         <a class="fancybox" data-fancybox-type="iframe" href="<?php the_permalink(); ?>?iframe=1">
