@@ -816,6 +816,7 @@ body{
 }
 .slug-pessoas #bio p {
   margin-bottom: 10px;
+  letter-spacing: -1px;
 }
 
 .slug-trabalhos #main,
