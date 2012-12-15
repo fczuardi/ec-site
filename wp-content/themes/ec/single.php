@@ -31,8 +31,8 @@ while ( have_posts() ) : the_post();
 			'tax_query' => array(
 				array(
 					'taxonomy' => 'campanha',
-					'field' => 'slug',
-					'terms' => $campanha->name
+					'field' => 'id',
+					'terms' => $campanha->term_id
 				)
 			)
 		);
