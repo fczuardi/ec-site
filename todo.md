@@ -9,7 +9,7 @@
 - ajustar entrelinha dos mouse-overs dos quadrados da página de trabalhos
 [ok] - fazer o onclick com fundo azul e texto branco de acordo com o layout
 [ok] - checkbox para mostrar ou omitir o quadrado da listagem de trabalhos (se o post deve ou nao aparecer no grid)
-- cadastrar os vídeos
+[0k] - cadastrar os vídeos
 
 # Pessoas
 [ok] - ajustar CSS do <p> com letter-spacing -1px
