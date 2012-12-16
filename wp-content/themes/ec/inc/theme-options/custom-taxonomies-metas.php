@@ -65,8 +65,10 @@ function ec_admin_meta_post_destaque( $post ) {
 
 add_action( 'save_post', 'ec_post_save_postdata' );
 function ec_post_save_postdata( $post_id ) {
+  if ( defined('DOING_AJAX') )
+    return;
   if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
-      return;
+    return;
 
   $post_ordem = $_POST['_ordem'];
   $post_tipo = $_POST['_tipo'];

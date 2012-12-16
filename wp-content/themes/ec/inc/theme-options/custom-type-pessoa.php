@@ -28,7 +28,7 @@ function ec_create_type_pessoa() {
         'hierarchical' => false,
         'menu_position' => 3,
         'show_in_nav_menus' => false,
-        'supports' => array('title','thumbnail')
+        'supports' => array('title','thumbnail', 'page-attributes')
         );
 
     register_post_type('ec_pessoa',$args);
