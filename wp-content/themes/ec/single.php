@@ -13,11 +13,22 @@ if ($_GET["iframe"]) {
 	echo '<style>#masthead {display: none;}</style>';
 }
 
-while ( have_posts() ) : the_post();
-	$cliente = array_shift(array_values(get_the_terms($post->ID, 'cliente')));
-	$campanha = array_shift(array_values(get_the_terms($post->ID, 'campanha')));
-	// var_dump($cliente);
+// simular o ambiente de produção no localhost
+ini_set('display_errors', '1');
 
+class Cliente{
+	public $name = '';
+}
+
+class Campanha{
+	public $name = '';
+	public $term_id = null;
+}
+while ( have_posts() ) : the_post();
+	$get_terms_cliente = get_the_terms($post->ID, 'cliente');
+	$get_terms_campanha = get_the_terms($post->ID, 'campanha');
+	$cliente = $get_terms_cliente ? array_shift($get_terms_cliente) : new Cliente;
+	$campanha = $get_terms_campanha ? array_shift($get_terms_campanha): new Campanha;
 ?>
 
 
