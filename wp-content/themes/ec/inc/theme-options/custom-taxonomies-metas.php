@@ -75,11 +75,18 @@ function ec_post_save_postdata( $post_id ) {
   $post_subtitulo = $_POST['_subtitulo'];
   $post_destaque = $_POST['_destaque'];
 
-  add_post_meta($post_id, '_ordem', $post_ordem, true) or update_post_meta($post_id, '_ordem', $post_ordem);
-  add_post_meta($post_id, '_tipo', $post_tipo, true) or update_post_meta($post_id, '_tipo', $post_tipo);
-  add_post_meta($post_id, '_subtitulo', $post_subtitulo, true) or update_post_meta($post_id, '_subtitulo', $post_subtitulo);
-  add_post_meta($post_id, '_destaque', $post_destaque, true) or update_post_meta($post_id, '_destaque', $post_destaque);
-
+  if ($_POST['_ordem']){
+    add_post_meta($post_id, '_ordem', $post_ordem, true) or update_post_meta($post_id, '_ordem', $post_ordem);
+  }
+  if ($_POST['_tipo']){
+    add_post_meta($post_id, '_tipo', $post_tipo, true) or update_post_meta($post_id, '_tipo', $post_tipo);
+  }
+  if ($_POST['_subtitulo']){
+    add_post_meta($post_id, '_subtitulo', $post_subtitulo, true) or update_post_meta($post_id, '_subtitulo', $post_subtitulo);
+  }
+  if ($_POST['_destaque']){
+    add_post_meta($post_id, '_destaque', $post_destaque, true) or update_post_meta($post_id, '_destaque', $post_destaque);
+  }
 }
 
 
