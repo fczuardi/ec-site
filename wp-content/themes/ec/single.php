@@ -45,7 +45,9 @@ while ( have_posts() ) : the_post();
 					'field' => 'id',
 					'terms' => $campanha->term_id
 				)
-			)
+			),
+		'order' => 'ASC',
+		'orderby' => 'date'
 		);
 		$posts = get_posts($args);
 		foreach($posts as $post) :
