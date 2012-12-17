@@ -76,6 +76,20 @@ function ec_post_save_postdata( $post_id ) {
   $post_destaque = $_POST['_destaque'];
 
   if ($_POST['_ordem']){
+    //remove the _ordem meta from all older posts with the same value
+    $args = array(
+      'post_type' => 'post',
+      'posts_per_page' => -1,
+      'meta_key' => '_ordem',
+      'order' => 'ASC',
+      'meta_value' => $post_ordem
+    );
+    $query = new WP_Query($args);
+    $posts = $query->posts;
+    foreach ($posts as $post) {
+      delete_post_meta($post->ID, '_ordem');
+    }
+    //add the _ordem meta to the new post with this value
     add_post_meta($post_id, '_ordem', $post_ordem, true) or update_post_meta($post_id, '_ordem', $post_ordem);
   }
   if ($_POST['_tipo']){
