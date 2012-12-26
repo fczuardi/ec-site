@@ -581,6 +581,10 @@ object {
 	color:#42C4DD;
 }
 
+.slug-contato a:hover{
+	text-decoration:underline;
+}
+
 body{
 	font-family: 'rudaregular';
 	color:#2E2B2B;
