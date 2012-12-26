@@ -595,6 +595,10 @@ p{
 	color:#2E2B2B;
 }
 
+.slug-ec .entry-header h1{
+	margin-bottom:-10px;
+}
+
 .slug-ec .entry-content p{
 	margin-bottom:13px;
 }
