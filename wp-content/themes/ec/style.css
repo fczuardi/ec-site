@@ -647,7 +647,7 @@ body{
   background-position: -480px -299px;
 }
 
-.slug-pessoas p{
+.slug-pessoas #bio p{
 	font-size:14px;
 	line-height:22px;
 }
