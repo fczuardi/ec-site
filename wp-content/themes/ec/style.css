@@ -558,8 +558,8 @@ object {
 ----------------------------------------------- */
 
 .slug-contato{
-  background-image: url(img/dev-bg-contato.png);
-  background-position: 239px -4px;
+/*  background-image: url(img/dev-bg-contato.png);*/
+/*  background-position: 239px -4px;*/
 }
 
 .slug-contato #main,
@@ -609,10 +609,13 @@ object {
 
 .slug-ec .entry-header h1{
 	margin-bottom:-18px;
+	margin-left:200px;
+	padding-top:75px;
 }
 
 .slug-ec .entry-content p{
 	margin-bottom:13px;
+	margin-left:200px;
 }
 
 .slug-ec a,
