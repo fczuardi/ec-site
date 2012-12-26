@@ -585,6 +585,11 @@ object {
 	text-decoration:underline;
 }
 
+.slug-ec{
+  background-image: url(img/dev-bg-ec.png);
+  background-position: 239px -4px;
+}
+
 p{
 	font-family: 'rudaregular';
 	color:#2E2B2B;
