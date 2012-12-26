@@ -595,7 +595,9 @@ object {
   background-position: 239px -28px;
 }
 
-p{
+
+.slug-ec p,
+.slug-contato p{
 	font-family: 'rudaregular';
 	color:#2E2B2B;
 }
@@ -608,11 +610,15 @@ p{
 	margin-bottom:13px;
 }
 
-a{
+.slug-ec a,
+.slug-contato a{
 	color:#42C4DD;
 }
 
-h1, h2{
+.slug-ec h1,
+.slug-ec h2,
+.slug-contato h1
+.slug-contato h2{
 	font-family: 'flama_condensed_blackregular';
 	text-transform:uppercase;
 	font-size:45px;
