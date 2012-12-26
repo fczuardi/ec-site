@@ -578,6 +578,10 @@ object {
 	left: 442px;
 }
 
+.slug-contato .logo{
+	margin-top:20px;
+}
+
 .slug-contato a{
 	text-decoration: none;
 }
