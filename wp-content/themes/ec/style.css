@@ -573,6 +573,14 @@ object {
 	left: 442px;
 }
 
+.slug-contato a{
+	text-decoration: none;
+}
+
+.slug-contato a:visited;{
+	color:#42C4DD;
+}
+
 body{
 	font-family: 'rudaregular';
 	color:#2E2B2B;
