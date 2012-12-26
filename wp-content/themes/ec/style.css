@@ -558,8 +558,8 @@ object {
 ----------------------------------------------- */
 
 .slug-contato{
-  background-image: url(img/dev-bg-contato.png);
-  background-position: 239px -4px;
+/*  background-image: url(img/dev-bg-contato.png);*/
+/*  background-position: 239px -4px;*/
 }
 
 .slug-contato #main,
@@ -573,9 +573,8 @@ object {
 
 .slug-contato .mapa{
 	position: relative;
-/*	opacity:.5;*/
-	top: 142px;
-	left: 442px;
+	top: -217px;
+	left: 194px;
 }
 
 .slug-contato .logo{
