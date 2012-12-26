@@ -562,7 +562,8 @@ object {
   background-position: 239px -4px;
 }
 
-.slug-contato #main{
+.slug-contato #main,
+.slug-ec #main{
   width:880px;
   margin:auto;
 }
