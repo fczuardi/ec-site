@@ -587,7 +587,7 @@ object {
 
 .slug-ec{
   background-image: url(img/dev-bg-ec.png);
-  background-position: 239px -4px;
+  background-position: 239px -28px;
 }
 
 p{
@@ -601,6 +601,8 @@ a{
 
 h1, h2{
 	font-family: 'flama_condensed_blackregular';
+	text-transform:uppercase;
+	font-size:30px;
 	color:#42C4DD;
 }
 
