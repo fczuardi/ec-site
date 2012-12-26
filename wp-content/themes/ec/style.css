@@ -554,19 +554,8 @@ object {
 /* =Custom EC-Site
 ----------------------------------------------- */
 
-/* debug
+/* Mauricio
 ----------------------------------------------- */
-body{
-  background-repeat: no-repeat;
-/*
-  background-position: center -101px;
-  background-image: url(img/dev-bg-home.png);
-
-*/}
-.slug-pessoas{
-  /*background-image: url(img/dev-bg-pessoas.png);*/
-  background-position: -480px -299px;
-}
 
 .slug-contato{
   background-image: url(img/dev-bg-contato.png);
@@ -582,6 +571,34 @@ body{
 	opacity:.5;
 	top: 142px;
 	left: 442px;
+}
+
+body{
+	font-family: 'rudaregular';
+	color:#2E2B2B;
+}
+
+a {
+	color:#42C4DD;
+}
+
+h1, h2{
+	font-family: 'flama_condensed_blackregular';
+	color:#42C4DD;
+}
+
+/* debug
+----------------------------------------------- */
+body{
+  background-repeat: no-repeat;
+/*
+  background-position: center -101px;
+  background-image: url(img/dev-bg-home.png);
+
+*/}
+.slug-pessoas{
+  /*background-image: url(img/dev-bg-pessoas.png);*/
+  background-position: -480px -299px;
 }
 
 /* Fontes
