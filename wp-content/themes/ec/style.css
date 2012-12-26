@@ -568,6 +568,11 @@ body{
   background-position: -480px -299px;
 }
 
+.slug-contato{
+  background-image: url(img/dev-bg-contato.png);
+  background-position: -480px -299px;
+}
+
 
 /* Fontes
 ----------------------------------------------- */
