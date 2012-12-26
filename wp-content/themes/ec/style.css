@@ -585,12 +585,12 @@ object {
 	text-decoration:underline;
 }
 
-body{
+p{
 	font-family: 'rudaregular';
 	color:#2E2B2B;
 }
 
-a {
+a{
 	color:#42C4DD;
 }
 
