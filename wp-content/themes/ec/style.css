@@ -570,9 +570,18 @@ body{
 
 .slug-contato{
   background-image: url(img/dev-bg-contato.png);
-  background-position: -480px -299px;
+  background-position: 239px -28px;
 }
 
+.slug-contato .entry-title{
+	display:none;
+}
+
+.slug-contato img{
+	position: absolute;
+	top: 118px;
+	left: 442px;
+}
 
 /* Fontes
 ----------------------------------------------- */
