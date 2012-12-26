@@ -566,7 +566,7 @@ object {
 	display:none;
 }
 
-.slug-contato img .mapa{
+.slug-contato .mapa{
 	position: absolute;
 /*	opacity:.5;*/
 	top: 142px;
