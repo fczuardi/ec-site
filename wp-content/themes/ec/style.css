@@ -595,6 +595,10 @@ p{
 	color:#2E2B2B;
 }
 
+.slug-ec .entry-content p{
+	line-height:2px;
+}
+
 a{
 	color:#42C4DD;
 }
@@ -603,7 +607,8 @@ h1, h2{
 	font-family: 'flama_condensed_blackregular';
 	text-transform:uppercase;
 	font-size:30px;
-	color:#42C4DD;
+	color:#2E2B2B;
+/*	color:#42C4DD;*/
 }
 
 /* debug
