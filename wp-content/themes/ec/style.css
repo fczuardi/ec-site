@@ -562,6 +562,10 @@ object {
   background-position: 239px -4px;
 }
 
+.slug-contato #main{
+  width:880px;
+  margin:auto;
+}
 .slug-contato .entry-title{
 	display:none;
 }
