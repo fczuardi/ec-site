@@ -5,7 +5,7 @@
 - definir como será o title das páginas, atualmente está "EC | Just another Wordpress Site"
 
 # Contatos
-- verificar pq o mapa sobe quando a janela diminui
++ verificar pq o mapa sobe quando a janela diminui @done (2013-01-07 02:33)
 
 # Trabalhos
 - ajustar entrelinha dos mouse-overs dos quadrados da página de trabalhos

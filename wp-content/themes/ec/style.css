@@ -566,6 +566,7 @@ object {
 .slug-ec #main{
   width:880px;
   margin:auto;
+  clear:both;
 }
 .slug-contato .entry-title{
 	display:none;

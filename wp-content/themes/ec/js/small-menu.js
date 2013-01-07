@@ -2,6 +2,7 @@
  * Handles toggling the main navigation menu for small screens.
  */
 jQuery( document ).ready( function( $ ) {
+/*
 	var $masthead = $( '#masthead' ),
 	    timeout = false;
 
@@ -36,4 +37,5 @@ jQuery( document ).ready( function( $ ) {
 			}
 		}, 200 );
 	} );
+*/
 } );
