@@ -643,8 +643,13 @@ body{
 
 */}
 .slug-pessoas{
-  /*background-image: url(img/dev-bg-pessoas.png);*/
+/*  background-image: url(img/dev-bg-pessoas.png);*/
   background-position: -480px -299px;
+}
+
+.slug-pessoas #bio p{
+	font-size:13px;
+	line-height:20px;
 }
 
 /* Fontes
@@ -876,7 +881,7 @@ body{
 }
 .slug-pessoas #bio{
   min-height: 10px;
-  width: 310px;
+  width: 300px;
   float: right;
   margin: 15px 30px 0 0px;
   /*background:rgba(255,0,255,0.5);*/
