@@ -730,13 +730,16 @@ body{
   color:#42C4DD;
 }
 
-#menu-principal #menu-item-home a      {background-position: 8px -173px;}
+#menu-principal #menu-item-home a,
+#menu-principal #menu-item-ec a        {background-position: 8px -173px;}
 #menu-principal #menu-item-trabalhos a {background-position: -172px -173px;}
 #menu-principal #menu-item-clientes a  {background-position: -352px -173px;}
 #menu-principal #menu-item-pessoas a   {background-position: -532px -173px;}
 #menu-principal #menu-item-contato a   {background-position: -712px -173px;}
 
 #menu-principal #menu-item-home a:active,
+#menu-principal #menu-item-ec a:active,
+#menu-principal #menu-item-ec.current-menu-item a,
 #menu-principal #menu-item-home.current-menu-item a      {background-position: 7px -38px;}
 #menu-principal #menu-item-trabalhos a:active,
 #menu-principal #menu-item-trabalhos.current-menu-item a {background-position: -171px -38px;}
@@ -765,12 +768,14 @@ body{
   font-size: 27px;
   line-height: 27px;
 }
+.slug-home #menu-principal #menu-item-ec a,
 .slug-home #menu-principal #menu-item-home a      {background-position: -20px -216px;}
 .slug-home #menu-principal #menu-item-trabalhos a {background-position: -201px -215px;}
 .slug-home #menu-principal #menu-item-clientes a  {background-position: -381px -214px;}
 .slug-home #menu-principal #menu-item-pessoas a   {background-position: -561px -215px;}
 .slug-home #menu-principal #menu-item-contato a   {background-position: -741px -216px;}
 
+.slug-home #menu-principal #menu-item-ec a:active,
 .slug-home #menu-principal #menu-item-home.current-menu-item a      {background-position: -20px -39px;}
 .slug-home #menu-principal #menu-item-trabalhos a:active {background-position: -201px -39px;}
 .slug-home #menu-principal #menu-item-clientes a:active  {background-position: -381px -37px;}

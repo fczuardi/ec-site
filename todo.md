@@ -1,12 +1,18 @@
 # Geral:
 
++ fazer o elefante começar apagado e ser um link para a pagina /ec @done (2013-01-07 02:02)
+
 - definir como será o title das páginas, atualmente está "EC | Just another Wordpress Site"
 
+# Contatos
+- verificar pq o mapa sobe quando a janela diminui
+
 # Trabalhos
-[ok] - verificar se tem como influenciar manualmente na ordem dos quadrados e se nao, implementar
-	Caso mais de um elemento esteja com a mesma posição eles serão ordenados aleatoriamente
-[ok] - [bug] marba 10 paezinhos não agrupa no popup
 - ajustar entrelinha dos mouse-overs dos quadrados da página de trabalhos
+- implementar campo livre de texto para o texto que aparecerá no mouseover
+[ok] - verificar se tem como influenciar manualmente na ordem dos quadrados e se nao, implementar
+  Caso mais de um elemento esteja com a mesma posição eles serão ordenados aleatoriamente
+[ok] - [bug] marba 10 paezinhos não agrupa no popup
 [ok] - fazer o onclick com fundo azul e texto branco de acordo com o layout
 [ok] - checkbox para mostrar ou omitir o quadrado da listagem de trabalhos (se o post deve ou nao aparecer no grid)
 [0k] - cadastrar os vídeos
@@ -29,4 +35,4 @@
 -------------------------------------------------------------------------------
 # Bugs:
 
-- se editor os posts pelo quick-edit, o wordpress limpa os metas
+[ok] - se editor os posts pelo quick-edit, o wordpress limpa os metas
