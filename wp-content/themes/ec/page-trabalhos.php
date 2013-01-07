@@ -67,10 +67,11 @@ class Campanha{
           $get_terms_campanha = get_the_terms($post->ID, 'campanha');
           $cliente = $get_terms_cliente ? array_shift($get_terms_cliente) : new Cliente;
           $campanha = $get_terms_campanha ? array_shift($get_terms_campanha): new Campanha;
+          $mouseover = get_post_meta($post->ID, '_mouseover', true);
     ?>
       <div class="icon">
         <a class="fancybox" data-fancybox-type="iframe" href="<?php the_permalink(); ?>?iframe=1">
-          <span><p><?php echo $cliente->name; ?><br /><?php echo $campanha->name; ?></p></span>
+          <span><p><?php echo $mouseover ? $mouseover:($cliente->name .'<br />'. $campanha->name);?></p></span>
           <?php if( 'video' == get_post_meta($post->ID, '_tipo', true)): ?>
           <img class="play" src="<?php echo get_template_directory_uri(); ?>/img/play.png">
           <?php endif; ?>

@@ -6,6 +6,12 @@ add_action( 'add_meta_boxes', 'ec_type_post_properties', 10, 2 );
 
 function ec_type_post_properties() {
   add_meta_box(
+    'ec_post_mouseover',
+    __( 'Mouse-Over', 'ec'),
+    'ec_admin_meta_post_mouseover',
+    'post','normal','high'
+  );
+  add_meta_box(
     'ec_post_ordem',
     __( 'Posição de exibição no grid', 'ec'),
     'ec_admin_meta_post_ordem',
@@ -49,6 +55,13 @@ function ec_admin_meta_post_tipo( $post ) {
   echo '</table>';
 }
 
+function ec_admin_meta_post_mouseover( $post ) {
+  $mouseover = get_post_meta($post->ID, '_mouseover', true);
+  echo '<table class="form-table">';
+  echo '<input type="text" name="_mouseover" placeholder="Texto para o grid" value="', $mouseover ? $mouseover : '','" size="30" style="width:75%; margin-right: 20px; float:left;" />';
+  echo '</table>';
+}
+
 function ec_admin_meta_post_subtitulo( $post ) {
   $subtitulo = get_post_meta($post->ID, '_subtitulo', true);
   echo '<table class="form-table">';
@@ -72,6 +85,7 @@ function ec_post_save_postdata( $post_id ) {
 
   $post_ordem = $_POST['_ordem'];
   $post_tipo = $_POST['_tipo'];
+  $post_mouseover = $_POST['_mouseover'];
   $post_subtitulo = $_POST['_subtitulo'];
   $post_destaque = $_POST['_destaque'];
 
@@ -94,6 +108,9 @@ function ec_post_save_postdata( $post_id ) {
   }
   if ($_POST['_tipo']){
     add_post_meta($post_id, '_tipo', $post_tipo, true) or update_post_meta($post_id, '_tipo', $post_tipo);
+  }
+  if ($_POST['_mouseover']){
+    add_post_meta($post_id, '_mouseover', $post_mouseover, true) or update_post_meta($post_id, '_mouseover', $post_mouseover);
   }
   if ($_POST['_subtitulo']){
     add_post_meta($post_id, '_subtitulo', $post_subtitulo, true) or update_post_meta($post_id, '_subtitulo', $post_subtitulo);
