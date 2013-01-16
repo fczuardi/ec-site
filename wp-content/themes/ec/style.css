@@ -959,6 +959,10 @@ body{
   height: 158px;
   display: none;
 }
+.slug-trabalhos .icon span b{
+  font-weight: normal;
+  color:#42C4DD;
+}
 .slug-trabalhos .icon span p ,
 .icon span p {
   line-height: 25px;
