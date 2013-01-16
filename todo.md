@@ -5,7 +5,7 @@
 - lento? o site está bem leve?
 
 ## Pessoas:
-- 1. é que os textos das pessoas ainda parecem mais bold do que a referência no site do google. (seguem umas imagens pra mostrar)
++ 1. é que os textos das pessoas ainda parecem mais bold do que a referência no site do google. @done (2013-01-16 20:19)
 
 ## Contato:
 - menu está com um sublinhado, tirar.
