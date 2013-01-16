@@ -11,12 +11,12 @@
 - menu está com um sublinhado, tirar.
 
 ## Trabalhos
++ mouseover normal tem que ser 2 cores diferentes @done (2013-01-16 19:38)
+  + no caso de mouseover customizado, o bold faz o papel do azul @done (2013-01-16 19:38)
 + incluir descrição da campanha @done (2013-01-16 18:14)
   - deixar no estilo correto esta descrição
 + 2. em trabalhos, quando um popup aparece, o branco sobre o resto da página  poderia ser um pouco menos transparente? 90% @done (2013-01-16 19:31)
-- mouseover normal tem que ser 2 cores diferentes
-- no caso de mouseover customizado, o bold faz o papel do azul
-- 3. em trabalhos, a janela pop-up aparece com barra de scroll. dá pra tirar? (acho que é só no firefox).
++ 3. em trabalhos, a janela pop-up aparece com barra de scroll. dá pra tirar? (acho que é só no firefox). @done (2013-01-16 19:40)
 - 4. em trabalhos, quando eu clico no thumb, aparece um highlight azul do tamanho do box. dá pra tirar?
 - 5. no popup dos trabalhos, os links "impresso 1" etc, diminui o peso da fonte, por favor.
 - criar um campo customizado de subtitulo para peças sem campanha

@@ -1164,6 +1164,10 @@ body{
   height: 100%;
 }
 
+.fancybox-iframe{
+  overflow: hidden;
+}
+
 .fancybox-image {
   max-width: 100%;
   max-height: 100%;
