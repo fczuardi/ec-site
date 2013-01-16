@@ -18,8 +18,8 @@
   - deixar no estilo correto esta descrição
 + 2. em trabalhos, quando um popup aparece, o branco sobre o resto da página  poderia ser um pouco menos transparente? 90% @done (2013-01-16 19:31)
 + 3. em trabalhos, a janela pop-up aparece com barra de scroll. dá pra tirar? (acho que é só no firefox). @done (2013-01-16 19:40)
-- 4. em trabalhos, quando eu clico no thumb, aparece um highlight azul do tamanho do box. dá pra tirar?
-- 5. no popup dos trabalhos, os links "impresso 1" etc, diminui o peso da fonte, por favor.
++ 4. em trabalhos, quando eu clico no thumb, aparece um highlight azul do tamanho do box. dá pra tirar? @done (2013-01-16 20:31)
++ 5. no popup dos trabalhos, os links "impresso 1" etc, diminui o peso da fonte, por favor. @done (2013-01-16 20:34)
 - criar um campo customizado de subtitulo para peças sem campanha
 
 
