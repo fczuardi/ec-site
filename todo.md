@@ -2,13 +2,14 @@
 # Sexta 18 Janeiro 2013
 
 ## Geral:
+- mudar url para ec.vc/2/
 - lento? o site está bem leve?
 
 ## Pessoas:
 + 1. é que os textos das pessoas ainda parecem mais bold do que a referência no site do google. @done (2013-01-16 20:19)
 
 ## Contato:
-- menu está com um sublinhado, tirar.
++ menu está com um sublinhado, tirar. @done (2013-01-16 20:27)
 
 ## Trabalhos
 + mouseover normal tem que ser 2 cores diferentes @done (2013-01-16 19:38)
