@@ -4,7 +4,7 @@
  * Plugin URI: http://sideways8.com/plugins/s8-simple-taxonomy-images/
  * Description: This plugin was designed with themers and developers in mind. It allows for an easy way to quickly add category, tag, and custom taxonomy images to your taxonomy terms. Check our site (http://sideways8.com/plugins/s8-simple-taxonomy-images/) or the WordPress repository (http://wordpress.org/extend/plugins/s8-simple-taxonomy-images) for documentation on how to use this plugin.
  * Tags: taxonomy images, category images, taxonomy
- * Version: 0.8.2
+ * Version: 0.8.3
  * Author: Sideways8 Interactive
  * Author URI: http://sideways8.com/
  * License: GPLv3
@@ -27,6 +27,7 @@ class s8_simple_taxonomy_images {
 
     /**
      * Adds our form fields to the WP add/edit term forms
+     * @since 0.8.0
      */
     function init() {
         $taxes = get_taxonomies();
@@ -34,26 +35,36 @@ class s8_simple_taxonomy_images {
             foreach($taxes as $tax) {
                 add_action($tax.'_add_form_fields', array($this, 'add_fields'));
                 add_action($tax.'_edit_form_fields', array($this, 'edit_fields'));
+                // Add our thumbnail column to taxonomy overviews
+                add_filter("manage_edit-{$tax}_columns", array($this, 'add_taxonomy_column'));
+                add_filter("manage_{$tax}_custom_column", array($this, 'edit_taxonomy_columns'), 10, 3);
             }
         }
     }
 
     /**
      * Adds our custom fields to the WP add term form
+     * @since 0.8.0
      */
     function add_fields() {
-        wp_enqueue_style('thickbox');
-        wp_enqueue_script('thickbox');
-        wp_enqueue_script('s8-taxonomy-images', plugins_url('/js/s8-taxonomy-images.js', S8_STI_FILE), array('jquery'));
+        $this->setup_field_scripts();
+        global $wp_version;
+        // Make it look better if it is 3.5 or later
+        $before_3_5 = true;
+        if(preg_match('/^[3-9]\.[5-9]/', $wp_version)) $before_3_5 = false;
         /*?>
         <div class="form-field">
             <label for="s8_tax_order">Sort Order</label>
             <input type="number" name="s8_tax_order" id="s8_tax_order" size="4" min="0" max="9999" value="" />
         </div>*/ ?>
-    <div class="form-field">
-        <label for="s8_tax_image">Image</label>
-        <input type="text" name="s8_tax_image" id="s8_tax_image" value="" />
+    <div class="form-field" style="overflow: hidden;">
+        <label>Image</label>
+        <input type="hidden" name="s8_tax_image" id="s8_tax_image" value="" />
         <input type="hidden" name="s8_tax_image_classes" id="s8_tax_image_classes" value="" />
+        <br/>
+        <img src="" id="s8_tax_image_preview" style="max-width:300px;max-height:300px;float:left;display:none;padding:0 5px 5px 0;" />
+        <a href="#" class="<?php echo($before_3_5)?'':'button'; ?>" id="s8_tax_add_image">Add Image</a>
+        <a href="#" class="<?php echo($before_3_5)?'':'button'; ?>" id="s8_tax_remove_image" style="display: none;">Remove Image</a>
     </div>
     <?php
     }
@@ -61,11 +72,10 @@ class s8_simple_taxonomy_images {
     /**
      * Adds our custom fields to the WP edit term form
      * @param $taxonomy Object A WP Taxonomy term object
+     * @since 0.8.0
      */
     function edit_fields($taxonomy) {
-        wp_enqueue_style('thickbox');
-        wp_enqueue_script('thickbox');
-        wp_enqueue_script('s8-taxonomy-images', plugins_url('/js/s8-taxonomy-images.js', S8_STI_FILE), array('jquery'));
+        $this->setup_field_scripts();
         /*?>
         <tr class="form-field">
             <th><label for="s8_tax_order">Sort Order</label></th>
@@ -74,11 +84,30 @@ class s8_simple_taxonomy_images {
     <tr class="form-field">
         <th><label for="s8_tax_image">Image</label></th>
         <td>
-            <input type="text" name="s8_tax_image" id="s8_tax_image" value="<?php $image = s8_get_taxonomy_image_src($taxonomy, 'full'); echo ($image)?$image['src']:''; ?>" />
+            <?php $image = s8_get_taxonomy_image_src($taxonomy, 'full'); ?>
+            <input type="hidden" name="s8_tax_image" id="s8_tax_image" value="<?php echo ($image)?$image['src']:''; ?>" />
             <input type="hidden" name="s8_tax_image_classes" id="s8_tax_image_classes" value="" />
+            <?php $image = s8_get_taxonomy_image_src($taxonomy);  ?>
+            <img src="<?php echo ($image)?$image['src']:''; ?>" id="s8_tax_image_preview" style="max-width: 300px;max-height: 300px;float:left;display: <?php echo($image['src'])?'block':'none'; ?>;padding: 0 5px 5px 0;" />
+            <a href="#" class="button" id="s8_tax_add_image" style="display: <?php echo($image['src'])?'none':'inline-block'; ?>;">Add Image</a>
+            <a href="#" class="button" id="s8_tax_remove_image" style="display: <?php echo($image['src'])?'inline-block':'none'; ?>;">Remove Image</a>
         </td>
     </tr>
     <?php
+    }
+
+    function setup_field_scripts() {
+        //global $wp_version;
+        // WP 3.0.x - 3.4.x
+        //if(preg_match('/^3\.[1-4|0]/', $wp_version)) {
+            wp_enqueue_style('thickbox');
+            wp_enqueue_script('s8-taxonomy-images', plugins_url('/js/s8-taxonomy-images.js', S8_STI_FILE), array('jquery', 'thickbox'));
+        /*}
+        elseif(preg_match('/^[3-9]\.[5-9]/', $wp_version)) { // Version 3.5.x+
+            wp_enqueue_style('thickbox');
+            wp_enqueue_script('thickbox');
+            wp_enqueue_script('s8-taxonomy-images', plugins_url('/js/s8-taxonomy-images.js', S8_STI_FILE), array('jquery'));
+        }*/ // Until we get this working with the new uploader, use the old code and don't be redundant!
     }
 
     /**
@@ -86,29 +115,73 @@ class s8_simple_taxonomy_images {
      * @param $term_id
      * @param null $tt_id
      * @param null $taxonomy
+     * @since 0.8.0
      */
     function save_fields($term_id, $tt_id = null, $taxonomy = null) {
-        if(isset($_POST['s8_tax_order']) && ($order = (int)$_POST['s8_tax_order'])) {
+        // THE FOLLOWING BLOCK IS NOT USED AT THIS TIME AND MAY NEVER BE ENABLED FOR VARIOUS REASONS.
+        /*if(isset($_POST['s8_tax_order']) && ($order = (int)$_POST['s8_tax_order'])) {
             global $wpdb;
             $wpdb->query($wpdb->prepare("UPDATE $wpdb->terms SET term_group = $order WHERE term_id = $term_id;"));
             //wp_update_term($term_id, $taxonomy, array('term_group' => $order));
-        }
+        }*/ // END UNUSED CODE
+        // Save our info
+        $option = "s8_tax_image_{$taxonomy}_{$term_id}";
         if(isset($_POST['s8_tax_image']) && ($src = $_POST['s8_tax_image'])) {
             if($src != '') {
                 if(isset($_POST['s8_tax_image_classes']) && preg_match('/wp-image-([0-9]{1,99})/', $_POST['s8_tax_image_classes'], $matches)) {
-                    update_option('s8_tax_image_'.$taxonomy.'_'.$term_id, $matches[1]);
+                    // We have the ID from the class, use it.
+                    update_option($option, $matches[1]);
                 }
                 else {
                     global $wpdb;
                     $prefix = $wpdb->prefix;
                     $attachment = $wpdb->get_col($wpdb->prepare("SELECT ID FROM " . $prefix . "posts" . " WHERE guid='" . $src . "';"));
+                    // See if we found the attachment ID, otherwise save URL instead.
                     if(is_numeric($attachment[0]))
-                        update_option('s8_tax_image_'.$taxonomy.'_'.$term_id, $attachment[0]);
+                        update_option($option, $attachment[0]);
                     else
-                        update_option('s8_tax_image_'.$taxonomy.'_'.$term_id, $src);
+                        update_option($option, $src);
                 }
             }
+            else {
+                $test = get_option($option);
+                if($test)
+                    delete_option($option);
+            }
         }
+        else {
+            $test = get_option($option);
+            if($test)
+                delete_option($option);
+        }
+    }
+
+    /**
+     * Adds the new column to all taxonomy management screens
+     * @param $columns
+     * @return mixed
+     * @since 0.8.3
+     */
+    function add_taxonomy_column($columns) {
+        $columns['s8_tax_image_thumb'] = 'Taxonomy Image';
+        return $columns;
+    }
+
+    /**
+     * Adds the thumbnail to all terms in the taxonomy management screens (if they have a thumbnail we can get).
+     * @param $out
+     * @param $column_name
+     * @param $term_id
+     * @return bool|String
+     * @since 0.8.3
+     */
+    function edit_taxonomy_columns($out, $column_name, $term_id) {
+        if($column_name != 's8_tax_image_thumb') return $out;
+        $term = get_term($term_id, $_GET['taxonomy']);
+        $image = s8_get_taxonomy_image($term, array(50, 50));
+        if($image)
+            $out = $image;
+        return $out;
     }
 
     /**
@@ -116,23 +189,25 @@ class s8_simple_taxonomy_images {
      * @param $args
      * @param $taxonomies
      * @return mixed
+     * @since 0.8.0
      */
-    function filter_order($args, $taxonomies) {
+    /*function filter_order($args, $taxonomies) {
         if(is_admin()) return $args; // Avoid doing anything in the admin area.
         $args['orderby'] = 'term_group';
         return $args;
-    }
+    }*/
 
     /**
      * For our future shortcode...still working out what it will actually do.
      * @param $atts
+     * @since 0.8.0
      */
-    function shortcode_term_list($atts) {
+    /*function shortcode_term_list($atts) {
         extract(shortcode_atts(array(
             'taxonomy' => 'category',
             'show_children' => 0,
             'show_titles' => 0,
         ), $atts));
-    }
+    }*/
 }
 new s8_simple_taxonomy_images;
