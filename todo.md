@@ -1,4 +1,5 @@
 # Geral:
+- menu está com um sublinhado, tirar.
 - definir como será o title das páginas, atualmente está "EC | Just another Wordpress Site"
 
 + fazer o elefante começar apagado e ser um link para a pagina /ec @done (2013-01-07 02:02)
@@ -8,8 +9,12 @@
 + verificar pq o mapa sobe quando a janela diminui @done (2013-01-07 02:33)
 
 # Trabalhos
++ incluir descrição da campanha @done (2013-01-16 18:14)
+  - deixar no estilo correto esta descrição
+- mouseover normal tem que ser 2 cores diferentes
+- no caso de mouseover customizado, o bold faz o papel do azul
++ ajustar entrelinha dos mouse-overs dos quadrados da página de trabalhos @done (2013-01-07 14:45)
 + implementar campo livre de texto para o texto que aparecerá no mouseover @done (2013-01-07 03:05)
-- ajustar entrelinha dos mouse-overs dos quadrados da página de trabalhos
 [ok] - verificar se tem como influenciar manualmente na ordem dos quadrados e se nao, implementar
   Caso mais de um elemento esteja com a mesma posição eles serão ordenados aleatoriamente
 [ok] - [bug] marba 10 paezinhos não agrupa no popup
@@ -36,3 +41,7 @@
 # Bugs:
 
 [ok] - se editor os posts pelo quick-edit, o wordpress limpa os metas
+
+
+
+- não previmos muitos nomes, aumentar a altura do div

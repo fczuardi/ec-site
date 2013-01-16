@@ -35,6 +35,9 @@ while ( have_posts() ) : the_post();
 <div class="sidebar">
 	<h1><?php echo $cliente->name; ?></h1>
 	<h2><?php echo $campanha->name; ?></h2>
+<?php if (strlen($campanha->description) > 0){ ?>
+	<p class="description"><?php echo($campanha->description); ?></p>
+<?php	} ?>
 	<ul>
 		<?php
 		$args = array(
