@@ -2,8 +2,9 @@
 # Sexta 18 Janeiro 2013
 
 ## Geral:
-- mudar url para ec.vc/2/
 - lento? o site está bem leve?
+- definir como será o title das páginas, atualmente está "EC | Just another Wordpress Site"
++ mudar url para ec.vc/2/ @done (2013-01-18 11:01)
 
 ## Pessoas:
 + 1. é que os textos das pessoas ainda parecem mais bold do que a referência no site do google. @done (2013-01-16 20:19)
@@ -12,9 +13,10 @@
 + menu está com um sublinhado, tirar. @done (2013-01-16 20:27)
 
 ## Trabalhos
-- [admin] Quando altero o nome de uma Campanha ele altera também o Cliente.
-- investigar o problema da campanha Entrega Foguete relatado no email
-- ?? criar um campo customizado de subtitulo para peças sem campanha
+- ?? criar um campo customizado de subtitulo para peças sem campanha??
+- ?? [cannot reproduce] [bug] [admin] Quando altero o nome de uma Campanha ele altera também o Cliente.
+
++ [invalid] investigar o problema da campanha Entrega Foguete relatado no email @done (2013-01-18 10:45)
 + mouseover normal tem que ser 2 cores diferentes @done (2013-01-16 19:38)
   + no caso de mouseover customizado, o bold faz o papel do azul @done (2013-01-16 19:38)
 + incluir descrição da campanha @done (2013-01-16 18:14)
@@ -69,7 +71,6 @@ agora, etsou vendo algumas páginas em que dá vontade de por.
 -------------------------------------------------------------------------------
 
 # Geral:
-- definir como será o title das páginas, atualmente está "EC | Just another Wordpress Site"
 + fazer o elefante começar apagado e ser um link para a pagina /ec @done (2013-01-07 02:02)
 
 # Contatos

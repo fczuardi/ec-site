@@ -3,7 +3,7 @@
  * @author Bence Meszaros
  * @link http://bencemeszaros.com
  * @link http://wordpress.org/extend/plugins/wp-livephp/
- * @version 1.4.1
+ * @version 1.5
  */
 
 var LivePhp = {
