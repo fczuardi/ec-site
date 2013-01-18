@@ -886,6 +886,9 @@ body{
   float: right;
   margin: 15px 30px 0 0px;
   /*background:rgba(255,0,255,0.5);*/
+}
+.slug-pessoas #bio,
+.single-post .sidebar .description {
   font-family: 'rudaregular';
   font-style: normal;
   font-weight: 700;
@@ -905,6 +908,10 @@ body{
 }
 .slug-pessoas #bio p {
   margin-bottom: 10px;
+}
+
+.single-post .sidebar .description {
+  margin-top:20px;
 }
 
 .slug-trabalhos #main,
