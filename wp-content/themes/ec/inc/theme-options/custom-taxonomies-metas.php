@@ -87,7 +87,7 @@ function ec_post_save_postdata( $post_id ) {
   $post_tipo = $_POST['_tipo'];
   $post_mouseover = $_POST['_mouseover'];
   $post_subtitulo = $_POST['_subtitulo'];
-  $post_destaque = $_POST['_destaque'];
+  $post_destaque = $_POST['_destaque'] ? $_POST['_destaque'] : '';
 
   if ($_POST['_ordem']){
     //remove the _ordem meta from all older posts with the same value
@@ -115,9 +115,9 @@ function ec_post_save_postdata( $post_id ) {
   if ($_POST['_subtitulo']){
     add_post_meta($post_id, '_subtitulo', $post_subtitulo, true) or update_post_meta($post_id, '_subtitulo', $post_subtitulo);
   }
-  if ($_POST['_destaque']){
+  // if ($_POST['_destaque']){
     add_post_meta($post_id, '_destaque', $post_destaque, true) or update_post_meta($post_id, '_destaque', $post_destaque);
-  }
+  // }
 }
 
 
