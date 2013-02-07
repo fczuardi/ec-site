@@ -101,10 +101,19 @@ function ec_pessoa_save_postdata( $post_id ) {
   $pessoa_email = $_POST['_email'];
   $pessoa_biografia = $_POST['_biografia'];
 
-  add_post_meta($post_id, '_nomecompleto', $pessoa_nomecompleto, true) or update_post_meta($post_id, '_nomecompleto', $pessoa_nomecompleto);
-  add_post_meta($post_id, '_cargo', $pessoa_cargo, true) or update_post_meta($post_id, '_cargo', $pessoa_cargo);
-  add_post_meta($post_id, '_email', $pessoa_email, true) or update_post_meta($post_id, '_email', $pessoa_email);
-  add_post_meta($post_id, '_biografia', $pessoa_biografia, true) or update_post_meta($post_id, '_biografia', $pessoa_biografia);
+  if ($_POST['_nomecompleto']){
+    add_post_meta($post_id, '_nomecompleto', $pessoa_nomecompleto, true) or update_post_meta($post_id, '_nomecompleto', $pessoa_nomecompleto);
+  }
+  if ($_POST['_cargo']){
+    add_post_meta($post_id, '_cargo', $pessoa_cargo, true) or update_post_meta($post_id, '_cargo', $pessoa_cargo);
+  }
+  if ($_POST['_email']){
+    add_post_meta($post_id, '_email', $pessoa_email, true) or update_post_meta($post_id, '_email', $pessoa_email);
+  }
+  if ($_POST['_biografia']){
+    add_post_meta($post_id, '_biografia', $pessoa_biografia, true) or update_post_meta($post_id, '_biografia', $pessoa_biografia);
+  }
+
 
 }
 
