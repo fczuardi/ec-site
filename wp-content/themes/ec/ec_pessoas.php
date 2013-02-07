@@ -7,7 +7,8 @@ get_header();
 $args=array(
   'post_type' => 'ec_pessoa',
   'posts_per_page' => $posts_per_page,
-  'orderby'=> 'date'
+  'order'=>'ASC',
+  'orderby'=> 'menu_order'
 );
 
 $wp_query = new WP_Query($args);
